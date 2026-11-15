@@ -194,7 +194,7 @@
         \begin{onecolentry}
             \begin{highlights}
                 \item Analytical technical specialist with two years supporting enterprise generative AI platforms (Anthropic Claude, OpenAI). Uses SQL and Python to validate issues, reconcile billing and usage data across multiple sources, quantify business impact, and turn recurring patterns into clear recommendations for business, finance, and engineering stakeholders.
-                \item Hands-on builder of GenAI and agentic workflows (Claude API tool use, n8n orchestration, structured validation) and streaming data pipelines (Kafka, Spark, PostgreSQL). Record of 85\% first contact resolution, 90\% customer satisfaction, and a 20\% reduction in average incident resolution time.
+                \item Hands-on builder of GenAI workflows (Claude API with schema-validated structured output, Slack-based human approval, rule-based severity classification) and streaming data pipelines (Kafka, Spark Structured Streaming). Record of 85\% first contact resolution, 90\% customer satisfaction, and a 20\% reduction in average incident resolution time.
             \end{highlights}
         \end{onecolentry}
 
@@ -206,7 +206,7 @@
 
     \textbf{Programming \& Data Eng.:} \> Python, Spark Structured Streaming, Kafka, Hadoop MapReduce, FastAPI, REST\\ \> APIs, Docker, Git\\
 
-    \textbf{GenAI \& Automation:} \> Claude API (tool use), Agentic Workflow Orchestration (n8n), Structured Output\\ \> Validation, Jenkins CI, pytest, Robot Framework\\
+    \textbf{GenAI \& Automation:} \> Claude API, LLM Structured Output Validation, Slack API Automation, GitHub Actions\\ \> CI, pytest\\
 
     \textbf{Dashboards \& Monitoring:} \> DataDog, Grafana, Dashboard Monitoring, Log and Trace Analysis, Alerting\\
 
@@ -250,16 +250,16 @@
     \section{Projects}
 
         \begin{twocolentry}{
-            \href{https://hpk369.github.io/ai-qa-agent/}{Live Demo} |
+            \href{https://demo.inkandinfra.com/}{Live Demo} |
             \href{https://github.com/hpk369/ai-qa-agent/tree/main}{GitHub}
         }
-            \textbf{AI QA Agent}\end{twocolentry}
+            \textbf{ETL Production Support Triage Agent}\end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
-            \textbf{Technologies:}\> Python, Claude API, n8n, Jenkins, pytest, Robot Framework, Docker, PostgreSQL, Kafka, FastAPI
+            \textbf{Technologies:}\> Python, FastAPI, Claude API, Slack API, pytest, GitHub Actions, Docker
             \begin{highlights}
-                \item Designed an agentic workflow that uses the Claude API in tool use mode to triage test failures and produce structured defect summaries, posted to Slack for developer review.
-                \item Orchestrated the workflow through a 12-node n8n pipeline running in Docker, triggered by Robot Framework and pytest suites in a Jenkins CI pipeline.
+                \item Built an agent that triages ETL failures from log text alone: mixes real public production logs (LogHub) with 14 injected ETL failure signatures, classifies severity (P1 to P4) with a deterministic, config-driven ruleset, and opens a structured incident record with a matched runbook.
+                \item Posts Slack Block Kit alerts with Approve, Reject, and Escalate actions, uses the Claude API with schema-validated structured output to narrate alerts and judge resolution, and reports detection recall and MTTA/MTTR; tested with pytest in GitHub Actions CI.
             \end{highlights}
         \end{onecolentry}
 
@@ -270,11 +270,11 @@
             \textbf{Banking Transaction Processing Platform}\end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
-            \textbf{Technologies:}\> Python, Kafka, Spark Structured Streaming, PostgreSQL, FastAPI, WebSocket, Docker
+            \textbf{Technologies:}\> Python, Kafka, Spark Structured Streaming, FastAPI, WebSocket
             \begin{highlights}
-                \item Built an end-to-end banking transaction pipeline with real-time fraud detection, batch analytics, and automated reporting.
-                \item Modelled transaction, account, and fraud alert data in PostgreSQL and wrote the SQL used to reconcile balances and investigate flagged transactions.
-                \item Implemented automated health checks and alerting across the Kafka and Spark layers, and documented root cause analysis procedures in operational runbooks.
+                \item Built a banking transaction pipeline in three modes (file, Kafka, and Spark Structured Streaming) with rule-based fraud detection on transaction amount and velocity, publishing fraud alerts to a Kafka topic.
+                \item Built a live dashboard that replays 200K synthetic PaySim-style transactions through four fraud rules over FastAPI and WebSocket, plus batch analytics in Python (daily summaries, top accounts, hourly and location distributions) with automated reporting.
+                \item Implemented a system health monitor that raises threshold-based alerts on CPU, memory, and disk usage.
             \end{highlights}
         \end{onecolentry}
 
@@ -285,7 +285,7 @@
             \textbf{Movie Recommendation System}\end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
-            \textbf{Technologies:}\> Python, Hadoop, MapReduce, TF-IDF
+            \textbf{Technologies:}\> Python, Hadoop, MapReduce, mrjob, TF-IDF
             \begin{highlights}
                 \item Designed a multi-stage Hadoop MapReduce recommender over the MovieLens dataset (100K ratings, 9,125 movies, 671 users) using content based, collaborative, and hybrid algorithms, shipped as a live, browsable demo.
             \end{highlights}
