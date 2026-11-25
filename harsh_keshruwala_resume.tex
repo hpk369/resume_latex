@@ -202,11 +202,11 @@
         \begin{tabbing}
     \hspace{5.2cm} \= \hspace{4cm} \= \hspace{4cm} \= \kill % Set tab stop positions
 
-    \textbf{Data Analysis \& Querying:} \> SQL (PostgreSQL, MySQL, Oracle), MongoDB, Hex, Data Reconciliation, Impact\\ \> Analysis, Trend Analysis\\
+    \textbf{Data Analysis \& Querying:} \> SQL (PostgreSQL, MySQL, Oracle), Hex, Data Reconciliation, Impact Analysis,\\ \> Variance Analysis, Trend Analysis\\
 
-    \textbf{Programming \& Data Eng.:} \> Python, PySpark, Databricks (Unity Catalog, Medallion Pipelines), Kafka, Hadoop\\ \> MapReduce, FastAPI, REST APIs, Docker, Git\\
+    \textbf{Programming \& Data Eng.:} \> Python, PySpark, Databricks (Unity Catalog, Medallion Pipelines), Data Quality\\ \> Rules, REST APIs, Git\\
 
-    \textbf{GenAI \& Automation:} \> LangGraph, RAG (Databricks Vector Search), MLflow Evaluation, Copilot Studio,\\ \> Power Automate, Dataverse, Claude API, pytest, GitHub Actions CI\\
+    \textbf{GenAI \& Automation:} \> LangGraph, RAG (Databricks Vector Search), MLflow Evaluation, Copilot Studio,\\ \> Power Automate, Dataverse, LLM APIs, pytest, GitHub Actions CI\\
 
     \textbf{Dashboards \& Monitoring:} \> Power BI, DataDog, Grafana, Dashboard Monitoring, Log and Trace Analysis,\\ \> Alerting\\
 
@@ -275,19 +275,6 @@
             \begin{highlights}
                 \item Built a Copilot Studio agent that prices corporate loans, calculating deal and relationship RAROC deterministically in a Power Automate agent flow rather than in the language model, and answering policy questions with clause citations from three policy documents.
                 \item Routed deals below the 15\% RAROC hurdle and all policy exceptions to a human approver through Power Automate Approvals, logged every request and decision to a Dataverse audit table, and verified the pricing logic with a Python reference model tested with pytest in CI.
-            \end{highlights}
-        \end{onecolentry}
-
-        \begin{twocolentry}{
-            \href{https://hpk369.github.io/CineMatch/}{Live Demo} |
-            \href{https://github.com/hpk369/CineMatch}{GitHub}
-        }
-            \textbf{Movie Recommendation System}\end{twocolentry}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \textbf{Technologies:}\> Python, Hadoop, MapReduce, mrjob, TF-IDF
-            \begin{highlights}
-                \item Designed a multi-stage Hadoop MapReduce recommender over the MovieLens dataset (100K ratings, 9,125 movies, 671 users) using content based, collaborative, and hybrid algorithms, shipped as a live, browsable demo.
             \end{highlights}
         \end{onecolentry}
 
