@@ -194,7 +194,7 @@
         \begin{onecolentry}
             \begin{highlights}
                 \item Analytical technical specialist with two years supporting enterprise generative AI platforms (Anthropic Claude, OpenAI). Uses SQL and Python to validate issues, reconcile billing and usage data across multiple sources, quantify business impact, and turn recurring patterns into clear recommendations for business, finance, and engineering stakeholders.
-                \item Hands-on builder of GenAI workflows (Claude API with schema-validated structured output, Slack-based human approval, rule-based severity classification) and streaming data pipelines (Kafka, Spark Structured Streaming). Record of 85\% first contact resolution, 90\% customer satisfaction, and a 20\% reduction in average incident resolution time.
+                \item Hands-on builder of governed GenAI agents for banking analytics: a LangGraph agent on Databricks that answers KPI questions only through governed SQL functions, RAG, and a number check, evaluated in MLflow, and a Copilot Studio loan pricing agent with deterministic RAROC and human approvals. Record of 85\% first contact resolution, 90\% customer satisfaction, and a 20\% reduction in average incident resolution time.
             \end{highlights}
         \end{onecolentry}
 
@@ -204,11 +204,11 @@
 
     \textbf{Data Analysis \& Querying:} \> SQL (PostgreSQL, MySQL, Oracle), MongoDB, Hex, Data Reconciliation, Impact\\ \> Analysis, Trend Analysis\\
 
-    \textbf{Programming \& Data Eng.:} \> Python, Spark Structured Streaming, Kafka, Hadoop MapReduce, FastAPI, REST\\ \> APIs, Docker, Git\\
+    \textbf{Programming \& Data Eng.:} \> Python, PySpark, Databricks (Unity Catalog, Medallion Pipelines), Kafka, Hadoop\\ \> MapReduce, FastAPI, REST APIs, Docker, Git\\
 
-    \textbf{GenAI \& Automation:} \> Claude API, LLM Structured Output Validation, Slack API Automation, GitHub Actions\\ \> CI, pytest\\
+    \textbf{GenAI \& Automation:} \> LangGraph, RAG (Databricks Vector Search), MLflow Evaluation, Copilot Studio,\\ \> Power Automate, Dataverse, Claude API, pytest, GitHub Actions CI\\
 
-    \textbf{Dashboards \& Monitoring:} \> DataDog, Grafana, Dashboard Monitoring, Log and Trace Analysis, Alerting\\
+    \textbf{Dashboards \& Monitoring:} \> Power BI, DataDog, Grafana, Dashboard Monitoring, Log and Trace Analysis,\\ \> Alerting\\
 
     \textbf{Financial Data:} \> Stripe, Metronome, Anrok, Transaction Analysis, Billing and Metered Usage\\ \> Reconciliation\\
 
@@ -250,31 +250,31 @@
     \section{Projects}
 
         \begin{twocolentry}{
-            \href{https://demo.inkandinfra.com/}{Live Demo} |
-            \href{https://github.com/hpk369/ai-qa-agent/tree/main}{GitHub}
+            \href{https://insights.inkandinfra.com}{Live Demo} |
+            \href{https://github.com/hpk369/northlake-cib-insights-agent}{GitHub}
         }
-            \textbf{ETL Production Support Triage Agent}\end{twocolentry}
+            \textbf{CIB Performance Insights Agent}\end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
-            \textbf{Technologies:}\> Python, FastAPI, Claude API, Slack API, pytest, GitHub Actions, Docker
+            \textbf{Technologies:}\> Python, Databricks (Unity Catalog, Vector Search, MLflow), PySpark, SQL, LangGraph, Power BI, Gradio
             \begin{highlights}
-                \item Built an agent that triages ETL failures from log text alone: mixes real public production logs (LogHub) with 14 injected ETL failure signatures, classifies severity (P1 to P4) with a deterministic, config-driven ruleset, and opens a structured incident record with a matched runbook.
-                \item Posts Slack Block Kit alerts with Approve, Reject, and Escalate actions, uses the Claude API with schema-validated structured output to narrate alerts and judge resolution, and reports detection recall and MTTA/MTTR; tested with pytest in GitHub Actions CI.
+                \item Built a LangGraph agent on Databricks that explains why corporate and investment banking KPIs moved, taking every figure from six governed Unity Catalog SQL functions with bound parameters (the model never writes SQL) and metric definitions from a Vector Search RAG index over the bank's glossary.
+                \item Built a daily bronze, silver, and gold Databricks pipeline on synthetic data with data quality rules, quarantine, and a GL reconciliation control, feeding a gold star schema and an interactive Power BI executive dashboard.
+                \item Added a number check that rejects any answer whose figures do not match tool results, and evaluated the agent in MLflow on 15 questions with planted answers: 100\% number accuracy and tool selection, 86\% groundedness.
             \end{highlights}
         \end{onecolentry}
 
         \begin{twocolentry}{
-            \href{https://hpk369.github.io/bank-platform/}{Live Demo} |
-            \href{https://github.com/hpk369/bank-platform/tree/Kafka-and-Spark-upgrade}{GitHub}
+            \href{https://deals.inkandinfra.com}{Live Demo} |
+            \href{https://github.com/hpk369/northlake-deal-pricing-agent}{GitHub}
         }
-            \textbf{Banking Transaction Processing Platform}\end{twocolentry}
+            \textbf{Deal Pricing Agent}\end{twocolentry}
         \vspace{0.10 cm}
         \begin{onecolentry}
-            \textbf{Technologies:}\> Python, Kafka, Spark Structured Streaming, FastAPI, WebSocket
+            \textbf{Technologies:}\> Microsoft Copilot Studio, Power Automate, Dataverse, Python, pytest, GitHub Actions
             \begin{highlights}
-                \item Built a banking transaction pipeline in three modes (file, Kafka, and Spark Structured Streaming) with rule-based fraud detection on transaction amount and velocity, publishing fraud alerts to a Kafka topic.
-                \item Built a live dashboard that replays 200K synthetic PaySim-style transactions through four fraud rules over FastAPI and WebSocket, plus batch analytics in Python (daily summaries, top accounts, hourly and location distributions) with automated reporting.
-                \item Implemented a system health monitor that raises threshold-based alerts on CPU, memory, and disk usage.
+                \item Built a Copilot Studio agent that prices corporate loans, calculating deal and relationship RAROC deterministically in a Power Automate agent flow rather than in the language model, and answering policy questions with clause citations from three policy documents.
+                \item Routed deals below the 15\% RAROC hurdle and all policy exceptions to a human approver through Power Automate Approvals, logged every request and decision to a Dataverse audit table, and verified the pricing logic with a Python reference model tested with pytest in CI.
             \end{highlights}
         \end{onecolentry}
 
